@@ -1,6 +1,3 @@
-# translating-tools
-This repository contain the scripts to perform translation
-
 # Document Translation Scripts
 
 This repository contains Python scripts for translating various document formats using Google Translate, while preserving formatting where possible.
@@ -81,6 +78,15 @@ python translate_pdf.py -f document.pdf --source zh-CN --target en
 
 # Directory batch
 python translate_pdf.py -d ./pdf_files --source zh-CN --target en
+```
+
+### Convert PDF to MS Word
+```bash
+# In Kali-Linux
+sudo apt update && sudo apt install calibre -y
+
+# Convert PDF file to MS Word
+ebook-convert GB300_BIOS_2.1.pdf GB300_BIOS_2.1.docx
 ```
 
 ## Output
