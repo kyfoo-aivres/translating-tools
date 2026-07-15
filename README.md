@@ -47,8 +47,40 @@ All scripts use similar command-line arguments:
 
 - `-f, --file`: Path to a single file
 - `-d, --directory`: Path to a directory containing files
-- `--source`: Source language code (default: zh-CN)
-- `--target`: Target language code (default: en)
+- `--source`: Source language code. Defaults to `zh-CN` if omitted.
+- `--target`: Target language code. Defaults to `en` if omitted.
+
+### Default language settings
+
+If you do not provide the language options, the scripts use these defaults:
+
+- `--source zh-CN`
+- `--target en`
+
+### Language selection
+
+You can override the defaults by specifying `--source` and `--target` with any supported Google Translate language code. Common examples include:
+
+- `zh-CN` (Simplified Chinese)
+- `en` (English)
+- `ja` (Japanese)
+- `de` (German)
+- `fr` (French)
+- `es` (Spanish)
+- `ko` (Korean)
+
+Examples:
+
+```bash
+# Use the built-in defaults
+python translate_xlsx.py -f document.xlsx
+
+# Explicitly translate from Chinese to Japanese
+python translate_docx.py -f document.docx --source zh-CN --target ja
+
+# Translate from English to French
+python translate_pptx.py -f presentation.pptx --source en --target fr
+```
 
 ### Excel Translation
 ```bash
