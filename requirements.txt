@@ -1,0 +1,7 @@
+googletrans==4.0.0rc1
+tqdm
+openpyxl
+python-docx
+python-pptx
+pdfplumber
+reportlab

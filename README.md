@@ -18,7 +18,13 @@ Extracts text from PDF files, translates it, and generates a new PDF with transl
 
 ## Installation
 
-Install the required dependencies:
+Install the required Python dependencies from the repository requirements file:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+If you prefer to install them manually, use:
 
 ```bash
 pip install googletrans==4.0.0rc1 tqdm openpyxl python-docx python-pptx pdfplumber reportlab
@@ -98,7 +104,7 @@ ebook-convert GB300_BIOS_2.1.pdf GB300_BIOS_2.1.docx
 ## Notes
 
 - **Formatting Preservation**: Excel, PowerPoint, and Word scripts preserve original formatting. PDF translation creates a new document with basic layout.
-- **Language Support**: Uses Google Translate, so supports all languages Google Translate does. https://en.wikipedia.org/wiki/Google_Translate
+- **Language Support**: Uses Google Translate, so supports all languages Google Translate does.
 - **Error Handling**: Failed translations are logged and the original text is kept as fallback.
 - **Async Processing**: Uses asyncio for efficient translation requests.
 - **Progress Bars**: Shows translation progress with tqdm.
